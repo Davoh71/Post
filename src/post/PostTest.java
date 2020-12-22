@@ -56,7 +56,6 @@ public class PostTest implements PostInter {
     public static void searchPost(){
         postStorage.printAllPosts();
         String post = scanner.nextLine();
-        String name;
         Post post1 = postStorage.getByTittle(post);
         if (post1 == null){
             postStorage.searchPostsByKeyword(post);
@@ -64,6 +63,7 @@ public class PostTest implements PostInter {
             System.out.println(post);
     }
     ///////////////     {   3   }
+
     public static void postByCategory(){
         postStorage.printAllPosts();
         String post = scanner.nextLine();
