@@ -1,4 +1,6 @@
-package post;
+package post.storage;
+
+import post.model.Post;
 
 public class PostStorage {
 
@@ -29,8 +31,10 @@ public class PostStorage {
 
     public void searchPostsByKeyword(String keywoed) {
         for (int i = 0; i < size; i++) {
-            if (posts[i].getText().contains(keywoed)) {
+            if (posts[i].getText().contains(keywoed) | posts[i].getTitle().contains(keywoed)) {
                 System.out.println(posts[i]);
+            } else {
+                System.out.println(keywoed + " Chka tpes Titil kam Text");
             }
         }
 
@@ -42,11 +46,14 @@ public class PostStorage {
         }
     }
 
-    public void printPostsByCategory(String category) {
+    public void printPostsByCategory(String  category) {
         for (int i = 0; i < size; i++) {
-            if (posts[i].getCategory().contains(category)) {
+            if (posts[i].getCategory().equals(category)) {
                 System.out.println(posts[i]);
+            } else {
+                System.out.println(category + " Chka tpes Category ");
             }
+
         }
     }
 }

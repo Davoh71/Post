@@ -1,11 +1,11 @@
 package post;
 
 public interface PostInter {
-    String EXIT = "0";
-    String ADDPOST = "1";
-    String SEARCHPOST = "2";
-    String POSTBYCATEGORY = "3";
-    String ALLPOSTS = "4";
+    int EXIT = 0;
+    int ADDPOST = 1;
+    int SEARCHPOST = 2;
+    int POSTBYCATEGORY = 3;
+    int ALLPOSTS = 4;
 
    static void prinrtComands(){
        System.out.println("EXIT : " + EXIT);
