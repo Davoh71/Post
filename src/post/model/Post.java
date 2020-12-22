@@ -1,4 +1,4 @@
-package post;
+package post.model;
 
 
 import java.util.Date;

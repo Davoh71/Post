@@ -1,5 +1,8 @@
 package post;
 
+import post.model.Post;
+import post.storage.PostStorage;
+
 import java.util.Date;
 import java.util.Scanner;
 

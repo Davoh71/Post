@@ -1,4 +1,6 @@
-package post;
+package post.storage;
+
+import post.model.Post;
 
 public class PostStorage {
 
