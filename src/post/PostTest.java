@@ -71,6 +71,7 @@ public class PostTest implements PostInter {
             System.out.println(post);
         }else
            postStorage.printPostsByCategory(post);
+        System.out.println();
     }
 }
 
