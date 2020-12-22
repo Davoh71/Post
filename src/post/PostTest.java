@@ -15,8 +15,13 @@ public class PostTest implements PostInter {
         boolean isRun = true;
         while (isRun) {
             PostInter.prinrtComands();
-            String commands = scanner.nextLine();
-            switch (commands) {
+            int command;
+            try {
+                command = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                command = -1;
+            }
+            switch (command) {
                 case EXIT:
                     isRun = false;
                     break;
@@ -37,7 +42,8 @@ public class PostTest implements PostInter {
             }
         }
     }
-                ///////////    { 1 }
+
+    ///////////    { 1 }
     public static void addPost() {
         System.out.println("Please input Title Text Category");
         String post = scanner.nextLine();
@@ -49,29 +55,25 @@ public class PostTest implements PostInter {
             Post post1 = new Post(title, text, category, new Date());
             postStorage.add(post1);
             System.out.println("Lesson was added!");
-        }else
+        } else {
             System.out.println("Wrong Command!!!");
+        }
     }
-                /////////////    { 2 }
-    public static void searchPost(){
-        postStorage.printAllPosts();
-        String post = scanner.nextLine();
-        Post post1 = postStorage.getByTittle(post);
-        if (post1 == null){
-            postStorage.searchPostsByKeyword(post);
-        }else
-            System.out.println(post);
-    }
-    ///////////////     {   3   }
 
-    public static void postByCategory(){
+
+    /////////////    { 2 }
+    public static void searchPost() {
         postStorage.printAllPosts();
         String post = scanner.nextLine();
-        if (post == null){
-            System.out.println(post);
-        }else
-           postStorage.printPostsByCategory(post);
-        System.out.println();
+        postStorage.searchPostsByKeyword(post);
+    }
+
+
+    ///////////////     {   3   }
+    public static void postByCategory() {
+        System.out.println(" Posti Category ");
+        String post = scanner.nextLine();
+        postStorage.printPostsByCategory(post);
     }
 }
 

@@ -1,7 +1,10 @@
 package post.model;
 
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Objects;
 
 public class Post {
     String title;
@@ -9,15 +12,17 @@ public class Post {
     String category;
     Date createdDate;
 
- public Post (String title, String text,String category, Date createdDate){
+    public Post(String title, String text, String category, Date createdDate) {
         this.title = title;
         this.text = text;
         this.category = category;
         this.createdDate = createdDate;
- }
- public Post(){
+    }
 
- }
+    public Post() {
+
+    }
+
     public String getTitle() {
         return title;
     }
@@ -25,8 +30,9 @@ public class Post {
     public String getText() {
         return text;
     }
-    public String getCategory(){
-     return category;
+
+    public String getCategory() {
+        return category;
     }
 
     public Date getCreatedDate() {
@@ -81,3 +87,4 @@ public class Post {
                 '}';
     }
 }
+
